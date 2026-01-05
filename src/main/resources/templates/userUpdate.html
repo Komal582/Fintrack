@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Update Profile - FinTrack</title>
+  <style>
+    body {
+        background-color: #e6f2ff;
+        font-family: Arial, sans-serif;
+        padding: 40px;
+    }
+    .container {
+        width: 380px;
+        background: white;
+        padding: 25px;
+        margin: auto;
+        border-radius: 12px;
+        box-shadow: 0 0 12px rgba(0,0,0,0.2);
+        text-align: center;
+    }
+    h2 {
+        color: #004080;
+        margin-bottom: 20px;
+    }
+    input {
+        width: 100%;
+        padding: 12px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+    }
+    button {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        background-color: #004080;
+        color: white;
+        font-size: 15px;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #003366;
+    }
+    .back {
+        margin-top: 15px;
+        display: inline-block;
+        color: #004080;
+        text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Update Profile</h2>
+
+  <form action="/user/updateUser" method="post">
+
+    <input type="text" name="name" placeholder="Enter new name" required>
+
+    <input type="email" name="email" placeholder="Enter new email" required>
+
+    <input type="password" name="password" placeholder="Enter new password" required>
+
+    <button type="submit">Update Profile</button>
+  </form>
+
+  <a href="/user/dashboard" class="back">⬅ Back to Dashboard</a>
+</div>
+
+</body>
+</html>
