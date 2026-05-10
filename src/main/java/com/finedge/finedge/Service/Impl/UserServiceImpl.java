@@ -1,12 +1,11 @@
 package com.finedge.finedge.Service.Impl;
 
-import com.finedge.finedge.Model.User;
-import com.finedge.finedge.Repository.UserRepository;
-import com.finedge.finedge.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import com.finedge.finedge.Model.User;
+import com.finedge.finedge.Repository.UserRepository;
+import com.finedge.finedge.Service.UserService;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -23,7 +22,12 @@ public class UserServiceImpl implements UserService {
 
     }
 
-
+    @Override
+    public boolean updateUser(User user){
+          
+        userRepository.save(user);
+        return true;
+    }
 
 
 }
